@@ -1,0 +1,31 @@
+-- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)
+-- Found ament_lint_auto: 0.12.14 (/opt/ros/humble/share/ament_lint_auto/cmake)
+-- Added test 'flake8' to check Python code syntax and style conventions
+-- Added test 'lint_cmake' to check CMake code style
+-- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+-- Added test 'xmllint' to check XML markup files
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/moti/ros2_ws/build/yahboom_g1_description
+-- Install configuration: ""
+-- Installing: /home/moti/ros2_ws/install/yahboom_g1_description/share/yahboom_g1_description/launch
+-- Installing: /home/moti/ros2_ws/install/yahboom_g1_description/share/yahboom_g1_description/launch/display.launch.py
+-- Installing: /home/moti/ros2_ws/install/yahboom_g1_description/share/yahboom_g1_description/launch/Untitled Document 1
+-- Installing: /home/moti/ros2_ws/install/yahboom_g1_description/share/yahboom_g1_description/urdf
+-- Installing: /home/moti/ros2_ws/install/yahboom_g1_description/share/yahboom_g1_description/urdf/yahboom_g1.urdf
+-- Installing: /home/moti/ros2_ws/install/yahboom_g1_description/share/yahboom_g1_description/rviz
+-- Installing: /home/moti/ros2_ws/install/yahboom_g1_description/share/ament_index/resource_index/package_run_dependencies/yahboom_g1_description
+-- Installing: /home/moti/ros2_ws/install/yahboom_g1_description/share/ament_index/resource_index/parent_prefix_path/yahboom_g1_description
+-- Up-to-date: /home/moti/ros2_ws/install/yahboom_g1_description/share/yahboom_g1_description/environment/ament_prefix_path.sh
+-- Installing: /home/moti/ros2_ws/install/yahboom_g1_description/share/yahboom_g1_description/environment/ament_prefix_path.dsv
+-- Up-to-date: /home/moti/ros2_ws/install/yahboom_g1_description/share/yahboom_g1_description/environment/path.sh
+-- Installing: /home/moti/ros2_ws/install/yahboom_g1_description/share/yahboom_g1_description/environment/path.dsv
+-- Up-to-date: /home/moti/ros2_ws/install/yahboom_g1_description/share/yahboom_g1_description/local_setup.bash
+-- Up-to-date: /home/moti/ros2_ws/install/yahboom_g1_description/share/yahboom_g1_description/local_setup.sh
+-- Up-to-date: /home/moti/ros2_ws/install/yahboom_g1_description/share/yahboom_g1_description/local_setup.zsh
+-- Installing: /home/moti/ros2_ws/install/yahboom_g1_description/share/yahboom_g1_description/local_setup.dsv
+-- Installing: /home/moti/ros2_ws/install/yahboom_g1_description/share/yahboom_g1_description/package.dsv
+-- Up-to-date: /home/moti/ros2_ws/install/yahboom_g1_description/share/ament_index/resource_index/packages/yahboom_g1_description
+-- Up-to-date: /home/moti/ros2_ws/install/yahboom_g1_description/share/yahboom_g1_description/cmake/yahboom_g1_descriptionConfig.cmake
+-- Up-to-date: /home/moti/ros2_ws/install/yahboom_g1_description/share/yahboom_g1_description/cmake/yahboom_g1_descriptionConfig-version.cmake
+-- Installing: /home/moti/ros2_ws/install/yahboom_g1_description/share/yahboom_g1_description/package.xml

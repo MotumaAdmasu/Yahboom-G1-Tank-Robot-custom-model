@@ -1,0 +1,248 @@
+<?xml version="1.0"?>
+<robot name="yahboom_g1_tank">
+
+  <!-- MAIN CHASSIS (Tank Body) - YELLOW -->
+  <link name="chassis">
+    <visual>
+      <geometry>
+        <box size="0.18 0.10 0.04"/>
+      </geometry>
+      <material name="chassis_yellow">
+        <color rgba="1.0 0.8 0.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.18 0.10 0.04"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="1.5"/>
+      <inertia ixx="0.01" ixy="0.0" ixz="0.0" iyy="0.01" iyz="0.0" izz="0.01"/>
+    </inertial>
+  </link>
+
+  <!-- LEFT TRACK - OVAL/CATERPILLAR SHAPE covering entire left side -->
+  <link name="left_track">
+    <visual>
+      <geometry>
+        <box size="0.22 0.03 0.06"/>
+      </geometry>
+      <material name="track_black">
+        <color rgba="0.0 0.0 0.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.22 0.03 0.06"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.7"/>
+      <inertia ixx="0.004" ixy="0.0" ixz="0.0" iyy="0.004" iyz="0.0" izz="0.004"/>
+    </inertial>
+  </link>
+
+  <!-- RIGHT TRACK - OVAL/CATERPILLAR SHAPE covering entire right side -->
+  <link name="right_track">
+    <visual>
+      <geometry>
+        <box size="0.22 0.03 0.06"/>
+      </geometry>
+      <material name="track_black">
+        <color rgba="0.0 0.0 0.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.22 0.03 0.06"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.7"/>
+      <inertia ixx="0.004" ixy="0.0" ixz="0.0" iyy="0.004" iyz="0.0" izz="0.004"/>
+    </inertial>
+  </link>
+
+  <!-- LEFT FRONT TRACK WHEEL (RED) -->
+  <link name="left_front_wheel">
+    <visual>
+      <geometry>
+        <cylinder length="0.035" radius="0.025"/>
+      </geometry>
+      <material name="wheel_red">
+        <color rgba="1.0 0.0 0.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.035" radius="0.025"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.1"/>
+      <inertia ixx="0.0001" ixy="0.0" ixz="0.0" iyy="0.0001" iyz="0.0" izz="0.0001"/>
+    </inertial>
+  </link>
+
+  <!-- LEFT BACK TRACK WHEEL (RED) -->
+  <link name="left_back_wheel">
+    <visual>
+      <geometry>
+        <cylinder length="0.035" radius="0.025"/>
+      </geometry>
+      <material name="wheel_red">
+        <color rgba="1.0 0.0 0.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.035" radius="0.025"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.1"/>
+      <inertia ixx="0.0001" ixy="0.0" ixz="0.0" iyy="0.0001" iyz="0.0" izz="0.0001"/>
+    </inertial>
+  </link>
+
+  <!-- RIGHT FRONT TRACK WHEEL (RED) -->
+  <link name="right_front_wheel">
+    <visual>
+      <geometry>
+        <cylinder length="0.035" radius="0.025"/>
+      </geometry>
+      <material name="wheel_red">
+        <color rgba="1.0 0.0 0.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.035" radius="0.025"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.1"/>
+      <inertia ixx="0.0001" ixy="0.0" ixz="0.0" iyy="0.0001" iyz="0.0" izz="0.0001"/>
+    </inertial>
+  </link>
+
+  <!-- RIGHT BACK TRACK WHEEL (RED) -->
+  <link name="right_back_wheel">
+    <visual>
+      <geometry>
+        <cylinder length="0.035" radius="0.025"/>
+      </geometry>
+      <material name="wheel_red">
+        <color rgba="1.0 0.0 0.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.035" radius="0.025"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.1"/>
+      <inertia ixx="0.0001" ixy="0.0" ixz="0.0" iyy="0.0001" iyz="0.0" izz="0.0001"/>
+    </inertial>
+  </link>
+
+  <!-- JOINTS -->
+
+  <!-- Left Track - positioned to cover entire left side -->
+  <joint name="left_track_joint" type="fixed">
+    <parent link="chassis"/>
+    <child link="left_track"/>
+    <origin xyz="0.0 0.065 0.0" rpy="0 0 0"/>
+  </joint>
+
+  <!-- Right Track - positioned to cover entire right side -->
+  <joint name="right_track_joint" type="fixed">
+    <parent link="chassis"/>
+    <child link="right_track"/>
+    <origin xyz="0.0 -0.065 0.0" rpy="0 0 0"/>
+  </joint>
+
+  <!-- Left Front Wheel - DRIVE WHEEL -->
+  <joint name="left_front_wheel_joint" type="continuous">
+    <parent link="chassis"/>
+    <child link="left_front_wheel"/>
+    <origin xyz="0.08 0.065 0.0" rpy="1.5708 0 0"/>
+    <axis xyz="0 1 0"/>
+  </joint>
+
+  <!-- Left Back Wheel - DRIVE WHEEL -->
+  <joint name="left_back_wheel_joint" type="continuous">
+    <parent link="chassis"/>
+    <child link="left_back_wheel"/>
+    <origin xyz="-0.08 0.065 0.0" rpy="1.5708 0 0"/>
+    <axis xyz="0 1 0"/>
+  </joint>
+
+  <!-- Right Front Wheel - DRIVE WHEEL -->
+  <joint name="right_front_wheel_joint" type="continuous">
+    <parent link="chassis"/>
+    <child link="right_front_wheel"/>
+    <origin xyz="0.08 -0.065 0.0" rpy="1.5708 0 0"/>
+    <axis xyz="0 1 0"/>
+  </joint>
+
+  <!-- Right Back Wheel - DRIVE WHEEL -->
+  <joint name="right_back_wheel_joint" type="continuous">
+    <parent link="chassis"/>
+    <child link="right_back_wheel"/>
+    <origin xyz="-0.08 -0.065 0.0" rpy="1.5708 0 0"/>
+    <axis xyz="0 1 0"/>
+  </joint>
+
+  <!-- TURRET (BLUE) -->
+  <link name="turret">
+    <visual>
+      <geometry>
+        <cylinder length="0.035" radius="0.035"/>
+      </geometry>
+      <material name="turret_blue">
+        <color rgba="0.0 0.0 1.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.035" radius="0.035"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.2"/>
+      <inertia ixx="0.0001" ixy="0.0" ixz="0.0" iyy="0.0001" iyz="0.0" izz="0.0001"/>
+    </inertial>
+  </link>
+
+  <joint name="turret_joint" type="fixed">
+    <parent link="chassis"/>
+    <child link="turret"/>
+    <origin xyz="0.05 0.0 0.04" rpy="0 0 0"/>
+  </joint>
+
+  <!-- Gazebo Differential Drive Plugin -->
+  <!-- Control multiple wheels on each side for tank movement -->
+  <gazebo>
+    <plugin name="gazebo_ros_diff_drive" filename="libgazebo_ros_diff_drive.so">
+      <command_topic>cmd_vel</command_topic>
+      <odometry_topic>odom</odometry_topic>
+      <odometry_frame>odom</odometry_frame>
+      <robot_base_frame>chassis</robot_base_frame>
+      <publish_odom>true</publish_odom>
+      <publish_odom_tf>true</publish_odom_tf>
+      <publish_wheel_tf>false</publish_wheel_tf>
+      <left_joint>left_front_wheel_joint</left_joint>
+      <left_joint>left_back_wheel_joint</left_joint>
+      <right_joint>right_front_wheel_joint</right_joint>
+      <right_joint>right_back_wheel_joint</right_joint>
+      <wheel_separation>0.13</wheel_separation>
+      <wheel_diameter>0.05</wheel_diameter>
+      <max_wheel_torque>10</max_wheel_torque>
+      <wheel_acceleration>1.0</wheel_acceleration>
+    </plugin>
+  </gazebo>
+
+</robot>

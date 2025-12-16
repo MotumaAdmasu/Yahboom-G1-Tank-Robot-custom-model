@@ -1,0 +1,6 @@
+Invoking command in '/home/moti/ros2_ws/build/yahboom_g1_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/moti/ros2_ws/src/yahboom_g1_description -DCMAKE_INSTALL_PREFIX=/home/moti/ros2_ws/install/yahboom_g1_description
+Invoked command in '/home/moti/ros2_ws/build/yahboom_g1_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/moti/ros2_ws/src/yahboom_g1_description -DCMAKE_INSTALL_PREFIX=/home/moti/ros2_ws/install/yahboom_g1_description
+Invoking command in '/home/moti/ros2_ws/build/yahboom_g1_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/moti/ros2_ws/build/yahboom_g1_description -- -j7 -l7
+Invoked command in '/home/moti/ros2_ws/build/yahboom_g1_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/moti/ros2_ws/build/yahboom_g1_description -- -j7 -l7
+Invoking command in '/home/moti/ros2_ws/build/yahboom_g1_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/moti/ros2_ws/build/yahboom_g1_description
+Invoked command in '/home/moti/ros2_ws/build/yahboom_g1_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/moti/ros2_ws/build/yahboom_g1_description
